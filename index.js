@@ -1,5 +1,6 @@
 const http = require('http')
 const url = require('url')
+const port = process.env.PORT || 3000;
 const app = http.createServer((request, response) => {
     var query;
     if (request.method == 'POST') {
@@ -32,4 +33,5 @@ const app = http.createServer((request, response) => {
         })
     }
 });
-app.listen(3000);
+app.listen(port);
+console.log("Server listening...");
